@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "src/java-cup-11a.jar",
+        "src/compilador/java-cup-11a.jar"
+    ]
+}

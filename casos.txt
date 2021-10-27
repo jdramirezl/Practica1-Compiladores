@@ -1,0 +1,26 @@
+Programa dos
+
+int a, b, c;
+float d, e, f;
+string g, h, i;
+
+input(a, b, c, d, e, f, g, h, i);
+
+print(a, 12, -14, 1.5, 'hola 11');
+
+a = 1;
+b = 1 + 2 * 3 / 4;
+
+for (c = 2 + 3) until d step 45:
+    if (c > 10 && a <= 4 || 3):
+        while (7) do:
+            print(a);
+        endWhile
+    else:
+        for (c = 2 + 3) until d:
+            print(b);
+        endFor
+    endIf
+endFor
+
+FinPrograma

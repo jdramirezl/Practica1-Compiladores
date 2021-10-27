@@ -1,0 +1,33 @@
+Programa uno
+
+int a,b,c,i;
+float x,y,x;
+
+Read a,b,c;
+
+i=0;
+a=0;
+
+while (i<10) do:
+    if (a<b):
+        a=a+i;
+    else: 
+        if (x<y && a>b):
+            a=b+c;
+        endIf
+        b=b+i;
+    endIf
+
+    i=i+1;
+endWhile
+
+for (i=0) until a step 2:
+       c=c+i;
+       for (a=1) until b: 
+            Write a;
+       endFor
+endFor
+
+Write 'a =',a, 'b = ', b;
+
+FinPrograma

@@ -1,0 +1,43 @@
+import java_cup.runtime.*;
+
+parser code {:
+    public String errsin="";
+    public void syntax_error (Symbol  x){
+        errsin+="\nError Sintaxis en posición "+ (x.left+1) + "," + (x.right+1);
+        throw new UnsupportedOperationException (errsin);
+    }
+:};
+
+terminal pi, pd, pc, ig, com, rd, wt, wh, doAction, ew, fr, ul, ef, ifCond, el, ei, integer, floatNum, str, var, op, log, ip, fp, tp, step, colon; 
+non terminal S,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O;
+
+S::= ip A fp;
+A::= B | B A;
+B::= tp N | rd pi C | wt pi E | var ig G | ifCond pi L colon A I | wh pi L doAction colon A ew | fr pi var ig L ul J A ef;
+
+// Declarar var
+N::= var O;
+O::= com N | pc;
+
+// leer variables
+C::= var D;
+D::= com C | pd pc;
+
+// Escribir
+E::= var F | integer F | floatNum F | str F;
+F::= com E | pd pc;
+
+// Asginacion
+G::= var H | integer H | floatNum H | str H;
+H::= op G | log G | pc;
+
+// Cuerpo if
+I::= el colon A ei | ei;
+
+// For
+J::= var K | integer K;
+K::= colon | step integer colon;
+
+// Condicion
+L::= var M | integer M | floatNum M | str M;
+M::= op L | log L | pd;
