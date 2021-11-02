@@ -17,9 +17,13 @@ for (c = 2 + 3) until d step 45:
             print(a);
         endWhile
     else:
-        for (c = 2 + 3) until d:
-            print(b);
-        endFor
+            for (c = 2 + 3) until d:
+                print(b);
+            endFor
+
+            for (c = 2 + 3) until 10:
+                print(b);
+            endFor
     endIf
 endFor
 
